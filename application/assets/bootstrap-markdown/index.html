@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-markdown-editor.css"/>
+    <link rel="stylesheet" href="css/rainbow.css"/>
+    <link rel="stylesheet" href="css/css.css"/>
+</head>
+<body>
+    <div class="container">
+        <textarea name="text" id="editor">
+##Lists
+1. First ordered list item
+2. Another item
+  + Unordered sub-list.
+
+##Links
+[I'm an inline-style link](https://www.google.com)
+
+##Code and Syntax Highlighting
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+
+```python
+s = "Python syntax highlighting"
+print s
+```
+
+##Images
+![Alt text](http://i44.tinypic.com/2vtzcht.jpg)
+
+##Tables
+Colons can be used to align columns.
+
+|Tables   |Are          | Cool|
+|---------|:-----------:| ---:|
+|col 1 is |right-aligned|$1600|
+|col 2 is |centered     |$12  |
+
+##Blockquotes
+> Blockquotes are very handy to emulate reply text.
+        </textarea>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-markdown-editor.js"></script>
+<script type="text/javascript" src="js/ace-builds/src-noconflict/ace.js"></script>
+<script type="text/javascript" src="js/marked.min.js"></script>
+<script type="text/javascript" src="js/highlight.pack.js"></script>
+
+<script>
+    jQuery(document).ready(function($) {
+        $('#editor').markdownEditor({
+            preview: true,
+            onPreview: function (content, callback) {
+                callback( marked(content) );
+            }
+        });
+    });
+</script>
+</html>
+

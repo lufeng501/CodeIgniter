@@ -1,0 +1,28 @@
+/*!
+ * Start Bootstrap - Blog Home (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+    font-family: 'Microsoft YaHei';
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.div-label {
+    cursor: pointer;
+    margin: 5px;
+    float: left;
+}
+
+.outline {
+    line-height:175%;font-size: 16px
+}
+
+footer {
+    margin: 50px 0;
+}
